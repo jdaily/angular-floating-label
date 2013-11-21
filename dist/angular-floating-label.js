@@ -14,9 +14,18 @@
         scope: {
           options: '&floatingLabel'
         },
-        link: function(scope, el, args) {
+        link: function(scope, el, attr) {
+
           var options = scope.options();
           el.floatingLabel(options);
+
+          var label = $('label[for="' + el.attr('id') + '"]');
+
+          attr.$observe('placeholder', function(value) {
+            console.log('placeholder', value);
+            label.text(value);
+          });
+
         }
       };
     }]);

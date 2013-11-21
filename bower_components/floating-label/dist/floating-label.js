@@ -91,7 +91,7 @@
       }
     }
 
-    this.label.text(this.el.attr('placeholder'));
+    this.label.html(this.el.attr('placeholder'));
     this.label.css(this.options.labelStyles);
 
     this.label.insertBefore(this.el);
