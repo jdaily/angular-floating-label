@@ -1,6 +1,11 @@
-#angular-floating-label
+#angular-floating-label with ui.bootstrap
 
-The best project ever.
+##Floating Labels the Angular Way
+
+Inspired by Mark D. Smith's
+[Dribbble post](http://dribbble.com/shots/1254439--GIF-Mobile-Form-Interaction?list=users)
+and @jverdi's [JVFloatLabeledTextField](https://github.com/jverdi/JVFloatLabeledTextField)
+and @fauxparse's [bootstrap-floating-labels](https://github.com/fauxparse/bootstrap-floating-labels)
 
 ##Installation
 
@@ -15,9 +20,8 @@ The best project ever.
 
 ##Usage
 
-Docs coming soon
+See example
 
-##Development
 
 ###Requirements
 
@@ -38,6 +42,6 @@ or for just running tests on file changes:
 
 `grunt ci`
 
-###Tests
+###Tests - Comming Soon
 
 `grunt mocha`

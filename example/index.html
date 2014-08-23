@@ -2,47 +2,50 @@
 <html lang="en" ng-app="example-app">
   <head>
     <meta charset="utf-8" />
-    <title>angular-floating-label example</title>
+    <title>angular-floating-label example - with ui.bootstrap</title>
     <style>
-    body {
-      margin: 0;
-      padding: 20px;
-      font-family: Helvetica, sans-serif;
-      font-size: 14px;
-    }
+     body {
+        padding-top: 4em;
+      }
 
-    input, textarea {
-      padding: 10px;
-      border: 2px solid #b2b2b2;
-      outline: 0;
-    }
-
-    label {
-      padding-left: 10px;
-      font-size: 11px;
-      color: #b2b2b2;
-      font-weight: bold;
-    }
-
-    label.floatingLabel-focus {
-      color: #007fd5;
-    }
+      input, textarea {
+        font-weight: 100;
+      }
     </style>
-    <script src="../bower_components/jquery/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../dist/angular-floating-label.min.css">
+
+    <!-- // <script src="../bower_components/jquery/dist/jquery.js"></script> -->
     <script src="../bower_components/angular/angular.js"></script>
-    <script src="../bower_components/floating-label/dist/floating-label.js"></script>
-    <script src="../dist/angular-floating-label.js"></script>
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="../dist/angular-floating-label.min.js"></script>
     <script src="app.js"></script>
   </head>
   <body>
+      <div class="container">
+          <h1> Angular Floating Labels</h1>
 
-    <div ng-controller="MainController">
-      <form>
-        <p><input floating-label type="text" placeholder="First name" id="first-name" ng-model="firstName"></p>
-        <p><label for="last-name">Last Name</label><input floating-label type="text" placeholder="Last Name" id="last-name" ng-model="lastName"></p>
-        <p><textarea floating-label placeholder="Address for {{firstName}} {{lastName}}" id="address"></textarea></p>
-        <p><input type="text" value="blank" /></p>
-      </form>
-    </div>
+          <div ng-controller="MainController">
+              <form role="form">
+                  <div class="row">
+                      <div class="form-group col-xs-6 floating-label-form-group">
+                          <label for="first-name">First Name</label>
+                          <input class="form-control" floating-label="firstName" type="text" placeholder="First name" id="first-name" ng-model="firstName">
+                      </div>
+                      <div class="form-group col-xs-6 floating-label-form-group">
+                          <label for="last-name">Last Name</label>
+                          <input class="form-control" floating-label="lastName" type="text" placeholder="Last Name" id="last-name" ng-model="lastName">
+                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-xs-12 floating-label-form-group">
+                      <label for="description">Description</label>
+                      <textarea floating-label placeholder="Address for {{firstName}} {{lastName}}" id="address" rows="5"></textarea>
+                    </div>
+                  </div>
+
+            </form>
+          </div>
+      </div>
   </body>
 </html>
