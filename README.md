@@ -1,6 +1,5 @@
-#angular-floating-label with ui.bootstrap
 
-##Floating Labels the Angular Way
+#Floating Labels the Angular Way
 
 Inspired by Mark D. Smith's
 [Dribbble post](http://dribbble.com/shots/1254439--GIF-Mobile-Form-Interaction?list=users)
